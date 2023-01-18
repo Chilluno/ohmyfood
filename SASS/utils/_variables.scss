@@ -1,7 +1,19 @@
+// Colors 
+
 $primary-color: #9356DC;
+$primary-color-alt: #F5EDFF;
 $secondary-color: #FCA311;
 $bg-color: #F6F6F6;
 $white: #FFFFFF;
 $black: #101010;
 $grey: #353535;
+$grey-alt: #EAEAEA;
 $green: #99E2D0;
+
+// Gradients 
+
+$gradient-accent-color: #FF79DA;
+$gradient-primary-color: linear-gradient(200.64deg, $primary-color -5.2%, $gradient-accent-color 110.74%);
+
+// Font Sizes 
+
