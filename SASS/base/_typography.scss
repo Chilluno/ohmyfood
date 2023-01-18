@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&family=Shrikhand&display=swap');
+
+.heading{
+font-family: Roboto;
+font-weight: 700;
+   &_menu{
+      font-family: Shrikhand;
+   }
+   &_sub{
+      font-size: $sub-heading;
+   }
+}
+
+p {
+   font-family: Roboto;
+   font-size: $paragraph;
+   font-weight: 300;
+}
+
+p.location-text {
+   font-weight: 500;
+}
+
+.footer-logo{
+   font-family: Shrikhand;
+   font-size: $sub-heading;
+}
