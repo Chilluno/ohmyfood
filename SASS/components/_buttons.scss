@@ -1,0 +1,9 @@
+$gradient-primary-color: linear-gradient(200.64deg, $primary-color, -5.2%, #FF79DA 110.74%);
+
+.btn {
+  height: 3,125rem;
+  background-color: $gradient-primary-color;
+   &:hover{
+      border-radius: 50px 50px;
+   }
+}
