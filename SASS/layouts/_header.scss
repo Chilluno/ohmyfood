@@ -14,4 +14,5 @@
    background-color: $grey-alt;
    text-align: center;
    padding: 16px 0px 16px 0px;
+   @include flexbox(row, center);
 }

@@ -14,40 +14,42 @@
     <header class="header">
       <img class="header-logo" src="assets/logo/ohmyfood@2x.svg" />
     </header>
-    <div class="location"><p class="location-text">Paris, Belleville</p></div>
+    <div class="location"><i class="fa-solid fa-location-dot"></i><p class="location-text">Paris, Belleville</p></div>
     <main>
 
-    <section>
+    <section class="about">
            
-      <div>
+      
         <h1 class="heading">Réservez le menu qui vous convient</h1>
         <p>
           Découvrez des restaurants d'exception, sélectionnés par nos soins.
         </p>
-        <button class="btn btn--gradient">Explorez nos restaurants</button>
-      </div>
+        <button class="btn btn--gradient">Explorer nos restaurants</button>
+      
       
     </section>
 
-    <section>
+    <section class="how-to">
       <h1 class="heading">Fonctionnement</h1>
 
-      <ol>
-        <li><i class="fa-solid fa-mobile-screen-button"></i>Choisissez un restaurant</li>
-        <li><i class="fa-sharp fa-solid fa-list-ul"></i>Composez votre menu</li>
-        <li><i class="fa-solid fa-store"></i>Dégustez au restaurant</li>
+      <ol class="instructions">
+        <li><button class="instruction-btn"><img  class="instruction-icon" src="assets/icons/mobile.svg"> Choisissez un restaurant</button></li>
+        <li><button class="instruction-btn"><img class="instruction-icon" src="assets/icons/list.svg">Composez votre menu</button></li>
+        <li><button class="instruction-btn"><img class="instruction-icon" src="assets/icons/store.svg">Dégustez au restaurant</button></li>
       </ol>
 
     </section>
 
-    <section>
+    <section class="results">
       <h1 class="heading">Restaurants</h1>
 
       <div class="card">
         <img src="assets/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg">
-        <div>
+        <div class="card-details">
+          <div>
           <h2 class="heading heading_sub">La palette du goût</h2>
           <p>Ménilmontant</p>
+          </div>
           <div>
             <i class="fa-regular fa-heart"></i>
           </div>
@@ -56,9 +58,11 @@
 
       <div class="card">
         <img src="assets/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg">
-        <div>
-          <h2 class="heading heading_sub">La note enchantée</h2>
-          <p>Charonne</p>
+        <div class="card-details">
+          <div>
+            <h2 class="heading heading_sub">La note enchantée</h2>
+            <p>Charonne</p>
+          </div>
           <div>
             <i class="fa-regular fa-heart"></i>
           </div>
@@ -67,9 +71,11 @@
       
       <div class="card">
         <img src="assets/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg">
-        <div>
+        <div class="card-details">
+          <div>
           <h2 class="heading heading_sub">À la française</h2>
           <p>Cité Rouge</p>
+          </div>
           <div>
             <i class="fa-regular fa-heart"></i>
           </div>
@@ -78,9 +84,11 @@
       
       <div class="card">
         <img src="assets/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg">
-        <div>
+        <div class="card-details">
+          <div>
           <h2 class="heading heading_sub">Le délice des sens</h2>
           <p>Folie-Méricourt</p>
+          </div>
           <div>
             <i class="fa-regular fa-heart"></i>
           </div>

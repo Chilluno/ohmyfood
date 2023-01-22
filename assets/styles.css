@@ -1,3 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&family=Shrikhand&display=swap");
+.heading {
+  font-family: Roboto;
+  font-weight: 700;
+}
+.heading_menu {
+  font-family: Shrikhand;
+}
+.heading_sub {
+  font-size: 1.3rem;
+}
+
+p {
+  font-family: Roboto;
+  font-size: 1.125rem;
+  font-weight: 300;
+}
+
+p.location-text {
+  font-weight: 500;
+}
+
+.footer-logo {
+  font-family: Shrikhand;
+  font-size: 1.3rem;
+}
+
+ul li {
+  font-family: Roboto;
+}
+
+button {
+  font-family: Roboto;
+}
+
 html {
   box-sizing: border-box;
 }
@@ -8,8 +43,13 @@ html {
 }
 
 body {
-  width: 400px;
+  width: 375px;
   background-color: #F6F6F6;
+}
+
+main {
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .btn {
@@ -18,6 +58,7 @@ body {
   padding: 0.9rem;
   border: none;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
 }
 .btn--gradient {
   background-image: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
@@ -27,6 +68,32 @@ body {
   opacity: 0.85;
 }
 
+.card {
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  width: 335px;
+  border-radius: 20px 20px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 0px;
+}
+.card > img {
+  border-radius: 20px 20px 0px 0px;
+  object-fit: cover;
+  height: 188px;
+  width: 335px;
+}
+.card-details {
+  padding: 16px 12px 12px 12px;
+  width: 312px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0px;
+}
+
 .header {
   background-color: #FFFFFF;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
@@ -34,6 +101,7 @@ body {
   position: relative;
 }
 .header .header-logo {
+  padding: 14px 0px 14px 0px;
   transform: translate(50%);
 }
 
@@ -41,6 +109,104 @@ body {
   background-color: #EAEAEA;
   text-align: center;
   padding: 16px 0px 16px 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0px;
+}
+
+.footer {
+  background-color: #353535;
+  color: #FFFFFF;
+  padding: 22px 0px 33px 25px;
+}
+.footer > ul {
+  margin-top: 9px;
+}
+.footer > ul > li {
+  margin-bottom: 7px;
+  list-style-type: none;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+  text-align: center;
+  margin-top: 39px;
+  margin-bottom: 57px;
+}
+
+.how-to {
+  background-color: #FFFFFF;
+  padding-top: 48px;
+  padding-bottom: 68px;
+}
+.how-to .instructions {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 24px;
+  padding-top: 26px;
+  counter-reset: list;
+}
+.how-to .instructions > li {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0px;
+}
+.how-to .instructions > li .instruction-btn {
+  margin-right: 25px;
+  height: 4rem;
+  background-color: #F6F6F6;
+  border: none;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 20px 20px 20px 20px;
+  width: 300px;
+  cursor: pointer;
+}
+.how-to .instructions > li .instruction-btn:hover {
+  background-color: #F5EDFF;
+}
+.how-to .instructions > li .instruction-icon {
+  width: 13px;
+  height: 20px;
+  padding-right: 20px;
+}
+.how-to .instructions > li .instruction-icon:hover {
+  fill: #9356DC;
+}
+.how-to .instructions > li::before {
+  font-family: Roboto;
+  counter-increment: list;
+  content: counter(list);
+  background: #9356DC;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  z-index: 1;
+  text-align: center;
+  color: #FFFFFF;
+  left: 10px;
+  position: relative;
+  margin-top: 5px;
+  padding-top: 3px;
+}
+
+.results {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  gap: 18px;
+  margin-top: 54px;
+  margin-bottom: 64px;
 }
 
 /*# sourceMappingURL=styles.css.map */
