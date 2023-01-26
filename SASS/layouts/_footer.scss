@@ -2,12 +2,20 @@
    background-color: $grey;
    color: $white;
    padding: 22px 0px 33px 25px;
+  
    >ul{
       margin-top: 9px;;
       >li{
          margin-bottom: 7px;
          list-style-type: none;
       
+         > i{
+            margin-right: 10px;
+         }
+
+         > p{
+            font-size: 0.98rem;
+         }
       }
    }  
 }
