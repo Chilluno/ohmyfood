@@ -9,6 +9,12 @@
    background-color: $white;
    padding-top: 48px;
    padding-bottom: 68px;
+
+   > h1{
+      margin-left: 20px;   
+   }
+
+
 .instructions {
 @include flexbox(column, space-evenly, center, 24px);
 padding-top: 26px;
@@ -16,6 +22,7 @@ counter-reset: list;
    > li {
       @include flexbox(row, flex-start, center);
       .instruction-btn {
+         position: relative;
          margin-right: 25px;
          height: 4rem;
          background-color: $bg-color;
@@ -25,20 +32,52 @@ counter-reset: list;
          width: 300px;
          cursor: pointer;
          &:hover {
-               background-color: $primary-color-alt;
-               
-         }
-         
-         }
-   
-         .instruction-icon {
-            width: 13px;
-            height: 20px;
-            padding-right: 20px;
-            &:hover {
-               fill: $primary-color;
+            background-color: $primary-color-alt;
+            .instruction_icon-mobile{
+               filter: invert(40%) sepia(53%) saturate(1285%) hue-rotate(235deg) brightness(91%) contrast(90%);
+            }
+            .instruction_icon-list{
+               filter: invert(40%) sepia(53%) saturate(1285%) hue-rotate(235deg) brightness(91%) contrast(90%);
+            }
+            .instruction_icon-store{
+               filter: invert(40%) sepia(53%) saturate(1285%) hue-rotate(235deg) brightness(91%) contrast(90%);
             }
          }
+         }
+   
+         .instruction_icon {
+            display: inline-block;
+            width: 13px;
+            height: 20px;
+            margin-right: 20px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            color: red;
+            border: none;
+            filter: invert(54%) sepia(0%) saturate(1275%) hue-rotate(193deg) brightness(91%) contrast(85%);
+            &-mobile{
+               background-image: url(../assets/icons/mobile.svg);
+               position: absolute;
+               left: 40px;
+               top: 23px;
+            }
+
+            &-list{
+               background-image: url(../assets/icons/list.svg);
+               position: absolute;
+               left: 40px;
+               top: 25px; 
+            }
+
+            &-store{
+               background-image: url(../assets/icons/store.svg);
+               position: absolute;
+               left: 40px;
+               top: 25px;
+            }
+         }
+
+        
 
          &::before{
             font-family: Roboto;
@@ -52,7 +91,7 @@ counter-reset: list;
             text-align: center;
             color: $white;
             left: 10px;
-            position: relative;
+            position: absolute;
             margin-top: 5px;
             padding-top: 3px;
          }
@@ -62,5 +101,25 @@ counter-reset: list;
 .results {
    @include flexbox(column, space-evenly, flex-start, 18px);
    margin-top: 54px;
-      margin-bottom: 64px;
+   margin-bottom: 64px;
+   > h1 {
+      margin-left: 20px; 
+   }
+   > a{
+      margin-left: 20px; 
+   }
+}
+
+.badge {
+   position: absolute;
+   top: 15px;
+   right: 15px;
+   padding: 8px 15px 8px 15px;
+   font-size: 14px;
+   font-family: Roboto;
+   border-radius: 2px;
+   &-new{
+      background-color: $tertiary-color;
+      color: $green;
+   }
 }
