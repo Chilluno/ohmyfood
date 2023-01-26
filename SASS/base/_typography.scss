@@ -5,11 +5,23 @@ font-family: Roboto;
 font-weight: 700;
    &_menu{
       font-family: Shrikhand;
+      font-size: $main-heading;
+      &-type{       
+         font-weight: 300;
+         font-size: $main-heading;
+         &::after{
+            
+            width: 40px;
+            border: solid 5px none;
+            color: $tertiary-color;
+         }
+      }
    }
    &_sub{
       font-size: $sub-heading;
    }
 }
+
 
 p {
    font-family: Roboto;
