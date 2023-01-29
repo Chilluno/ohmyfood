@@ -6,14 +6,19 @@ font-weight: 700;
    &_menu{
       font-family: Shrikhand;
       font-size: $main-heading;
-      &-type{       
+      &-type{     
+         position: relative;  
          font-weight: 300;
          font-size: $main-heading;
          &::after{
-            
+            position: absolute;
+            content: '';
+            height: 3px;
             width: 40px;
-            border: solid 5px none;
-            color: $tertiary-color;
+            left: 0;
+            right: 0;
+            bottom: -6px;
+            background-color: $tertiary-color;
          }
       }
    }
@@ -31,6 +36,12 @@ p {
 
 p.location-text {
    font-weight: 500;
+}
+
+span{
+   font-family: Roboto;
+   font-size: 15px;
+   font-weight: 300;
 }
 
 .footer-logo{
