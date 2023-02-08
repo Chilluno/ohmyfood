@@ -1,5 +1,6 @@
 @import "./utils/_variables.scss";
 @import "./utils/_mixins.scss";
+@import "./utils/_animations.scss";
 @import "./base/_typography.scss";
 @import "./base/_normalize.scss";
 @import "./components/_buttons.scss";
@@ -8,3 +9,109 @@
 @import "./layouts/_footer.scss";
 @import "./pages/_home.scss";
 @import "./pages/_menu.scss";
+
+@media screen and (min-width: 376px) {
+
+   body{
+      background-color: $bg-color;
+      width: auto;
+   }
+
+.header-logo{
+   margin-left: auto;
+   margin-right: auto;
+   height: 54px;
+   width: 50%;
+   }
+
+.header-menu{
+   .header-logo{
+   margin-left: auto;
+   margin-right: auto;
+   height: 54px;
+   transform: translate(-20px);
+   }
+   }
+   /* Home Page */   
+.about{
+   h1.heading {
+      font-size: 40px;
+}
+}
+
+
+
+.how-to{
+   >h1{
+      margin-left: 200px;
+   }
+   .instructions{
+      @include flexbox(row, flex-start, center, 24px); 
+      margin-left: 200px;  
+      >li {
+
+            &::before{
+               left: auto;
+               transform: translate(-12px); 
+            }
+      
+      }
+      
+   }
+
+   
+}   
+ 
+.results {
+   @include flexbox(row, space-evenly, center, 0px);
+   flex-wrap: wrap;
+   > h1{ 
+      width: 100%;
+      margin-left: 200px; 
+      margin-bottom: 28px;
+   }
+   
+   .card{
+   margin-left: 200px;   
+   }
+}
+
+/* Menu Pages */
+
+.heading_menu {
+   @include flexbox(row, center, center, 24px);
+   
+}
+
+.menu{
+   >img {
+      height: 423px;
+      width: 100%;
+      object-fit: cover;
+   }
+
+   &-content{
+   margin-left:192px;
+   margin-right: 192px;
+   padding-left: 211px;
+   padding-right: 211px;
+   }
+}
+
+
+.footer{
+      @include flexbox(row-reverse, flex-start);
+      > h2 {
+
+         margin-left:71px;
+         margin-right:80px; 
+      
+      }
+      > ul {
+      @include flexbox(row, space-evenly, flex-start, 40px);
+   }
+} 
+
+
+   
+}
