@@ -13,7 +13,9 @@
    }
 
    &-details{
+      background-color: $white;
       padding: 16px 12px 12px 12px;
+      border-radius: 0px 0px 20px 20px;
       width: 312px;
       @include flexbox(row, space-between, center);
    }
