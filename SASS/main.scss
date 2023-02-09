@@ -63,18 +63,15 @@
 }   
  
 .results {
-   @include flexbox(row, space-evenly, center, 0px);
-   flex-wrap: wrap;
    > h1{ 
-      width: 100%;
       margin-left: 200px; 
       margin-bottom: 28px;
    }
-   
-   .card{
-   margin-left: 200px;   
+   .result_container {
+      @include flexbox(row, space-evenly, center, 0px);
+      margin-left: 110px;
    }
-}
+   }
 
 /* Menu Pages */
 
