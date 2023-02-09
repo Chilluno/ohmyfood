@@ -1,4 +1,47 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&family=Shrikhand&display=swap");
+@keyframes check-appear {
+  to {
+    width: 60px;
+  }
+}
+.check {
+  background-color: #99E2D0;
+  width: 0;
+  animation: check-appear 1s;
+}
+
+@keyframes check-disappear {}
+@keyframes loader {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes loader-disappear {
+  from {
+    visibility: hidden;
+  }
+  to {
+    visibility: visible;
+  }
+}
+@keyframes heart-fill {}
+@keyframes content-appear {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .heading {
   font-family: Roboto;
   font-weight: 700;
@@ -110,7 +153,9 @@ a:visited {
   width: 335px;
 }
 .card-details {
+  background-color: #FFFFFF;
   padding: 16px 12px 12px 12px;
+  border-radius: 0px 0px 20px 20px;
   width: 312px;
   display: flex;
   flex-direction: row;
@@ -192,6 +237,29 @@ a:visited {
 }
 .footer > ul > li > p {
   font-size: 0.98rem;
+}
+
+.main-container {
+  animation: content-appear 2s;
+  width: 100%;
+}
+
+.loader-container {
+  position: absolute;
+  left: 50vw;
+  top: 50%;
+  visibility: hidden;
+  animation: loader-disappear 2s;
+}
+.loader-container .loader-content {
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 8px solid #fff;
+  border-color: #99E2D0 transparent transparent transparent;
+  animation: loader 1s linear infinite;
 }
 
 .about {
@@ -299,18 +367,20 @@ a:visited {
 }
 
 .results {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: flex-start;
-  gap: 18px;
   margin-top: 54px;
   margin-bottom: 64px;
 }
 .results > h1 {
   margin-left: 20px;
 }
-.results > a {
+.results .result_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  gap: 18px;
+}
+.results .result_container > a {
   margin-left: 20px;
 }
 
@@ -329,19 +399,16 @@ a:visited {
 }
 
 .menu {
-  position: relative;
-  background-color: #F6F6F6;
+  background-color: #FFFFFF;
 }
 .menu > img {
   width: 375px;
   height: 289px;
   z-index: -1;
   object-fit: cover;
-  object-position: top;
 }
 .menu-content {
-  position: relative;
-  top: -30px;
+  transform: translate(0, -30px);
   background-color: #F6F6F6;
   border-radius: 30px 30px 0px 0px;
   padding-left: 10px;
@@ -368,6 +435,93 @@ a:visited {
 .btn_menu {
   padding: 0px 50px;
   margin: 20px 0px 20px 0px;
+}
+
+@media screen and (min-width: 376px) {
+  body {
+    background-color: #F6F6F6;
+    width: auto;
+  }
+  .header-logo {
+    margin-left: auto;
+    margin-right: auto;
+    height: 54px;
+    width: 50%;
+  }
+  .header-menu .header-logo {
+    margin-left: auto;
+    margin-right: auto;
+    height: 54px;
+    transform: translate(-20px);
+  }
+  /* Home Page */
+  .about h1.heading {
+    font-size: 40px;
+  }
+  .how-to > h1 {
+    margin-left: 200px;
+  }
+  .how-to .instructions {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 24px;
+    margin-left: 200px;
+  }
+  .how-to .instructions > li::before {
+    left: auto;
+    transform: translate(-12px);
+  }
+  .results > h1 {
+    margin-left: 200px;
+    margin-bottom: 28px;
+  }
+  .results .result_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 0px;
+    margin-left: 110px;
+  }
+  /* Menu Pages */
+  .heading_menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+  }
+  .menu > img {
+    height: 423px;
+    width: 100%;
+    object-fit: cover;
+  }
+  .menu-content {
+    margin-left: 192px;
+    margin-right: 192px;
+    padding-left: 211px;
+    padding-right: 211px;
+  }
+  .footer {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 0px;
+  }
+  .footer > h2 {
+    margin-left: 71px;
+    margin-right: 80px;
+  }
+  .footer > ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    gap: 40px;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
