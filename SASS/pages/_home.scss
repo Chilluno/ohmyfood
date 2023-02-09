@@ -1,3 +1,26 @@
+.main-container {
+   animation: content-appear 2s;
+   width:100%;
+}
+
+.loader-container {
+   position: absolute;
+   left: 50vw;
+   top: 50%;
+   visibility: hidden;
+   animation: loader-disappear 2s;
+   .loader-content {
+      display: block;
+      width: 64px;
+      height: 64px;
+      margin: 8px;
+      border-radius: 50%;
+      border: 8px solid #fff;
+      border-color: $tertiary-color transparent transparent transparent;
+      animation: loader 1s linear infinite;
+   }
+}
+
 .about {
    @include flexbox(column, flex-start, center, 20px);
    text-align: center;
@@ -99,15 +122,18 @@ counter-reset: list;
    }
 }
 .results {
-   @include flexbox(column, space-evenly, flex-start, 18px);
    margin-top: 54px;
    margin-bottom: 64px;
    > h1 {
       margin-left: 20px; 
    }
-   > a{
-      margin-left: 20px; 
+   .result_container {
+      @include flexbox(column, space-evenly, flex-start, 18px);
+      > a{
+         margin-left: 20px; 
+      }
    }
+   
 }
 
 .badge {
