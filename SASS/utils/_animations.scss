@@ -1,19 +1,29 @@
 @keyframes check-appear {
-   from{}
-   to{width:60px;}
-}
-
-.check {
-   background-color: $tertiary-color;
-   width:0;
-   animation: check-appear 1s;
+   0% {
+      opacity: 0;
+  }
+  50% {
+      opacity: 0.5;
+  }
+  100% {
+      opacity: 1;
+  }
 }
 
 @keyframes check-disappear {
-   from{}
-   to{}
+   100% {
+      opacity: 0;
+  }
+  80% {
+      opacity: 0;
+  }
+  60% {
+      opacity: 0;
+  }
+  0% {
+      opacity: 1;
+  }
 }
-
 
 @keyframes loader {
    from{
@@ -34,7 +44,18 @@
    }
 }
 
-
+@keyframes menu-appear {
+   0% {
+      transform: scale(0.95);
+       opacity: 0;
+   }
+   50% {
+       opacity: 0.5;
+   }
+   100% {
+       opacity: 1;
+   }
+}
 
 
 

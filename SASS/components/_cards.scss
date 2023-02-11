@@ -22,17 +22,53 @@
 }
 
 .menu_card {
-
+position: relative;
 background-color: $white;
 border-radius: 15px;
 margin: 12px 0px 10px 0px;   
 box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
 padding: 12px 10px;
-@include flexbox(row, space-between, center);
+
 
    .price{
-      margin-top: 20px;
+      position: absolute;
+      bottom: 10px;
+      right: 20px;
       font-weight: 500;
       color: $grey;
+      transition: right 1s;
    }
+
+   .check{
+      position: absolute;
+         top: 0px;
+         right: 0px;
+         background-color: $tertiary-color;
+         border-radius: 0px 15px 15px 0px;
+         height: 66px;
+         width: 0px;
+         animation: check-disappear 1s ease-out;
+         transition: width 1s;
+         &-icon{
+            position: absolute; 
+            width: 0px;
+            height: 0px;
+            background-image: url(../assets/icons/check.svg);
+         }
+   }
+
+   &:hover{
+
+      .price_hover{    
+         right: 68px;
+
+      }
+         
+      .check_hover-appear{
+         animation: check-appear 1s ease-in;
+         width: 66px;
+
+      }
+   }
+   
 }

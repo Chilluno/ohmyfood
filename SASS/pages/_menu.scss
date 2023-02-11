@@ -17,8 +17,20 @@
       padding-left: 10px;
       padding-right: 10px;
       }
+
+      .menu-appetizer {
+         animation: menu-appear 2s ease-in;
+      }
+      .menu-dishes {
+         animation: menu-appear 2.5s ease-in;
+      }
+      .menu-desserts {
+         animation: menu-appear 3s ease-in;
+      }
    
 }
+
+
 
 .menu-wrapper {
    margin-bottom: 40px;
