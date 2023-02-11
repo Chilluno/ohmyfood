@@ -16,3 +16,29 @@
       opacity: 0.85;
    }
 }
+
+.heart-container {
+   position: relative;
+   cursor: pointer;
+}
+
+.icon-empty {
+   color: $black;
+   position: absolute;
+   top: -10px;
+   font-size: 1.7em;
+}
+.icon-empty:hover {
+   display: none;
+}
+.icon-full {
+   color: transparent;
+   position: absolute;
+   top: -10px;
+   font-size: 1.7em;
+   transition: color 1.2s ease-out;
+}
+.icon-full:hover {
+   color: $primary-color;
+   transition: color 1s ease-out;
+}
