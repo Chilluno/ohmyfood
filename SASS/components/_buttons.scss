@@ -25,8 +25,9 @@
 .icon-empty {
    color: $black;
    position: absolute;
-   top: -10px;
-   font-size: 1.7em;
+   top: -17px;
+   left: -30px;
+   font-size: 1.5em;
 }
 .icon-empty:hover {
    display: none;
@@ -34,8 +35,9 @@
 .icon-full {
    color: transparent;
    position: absolute;
-   top: -10px;
-   font-size: 1.7em;
+   top: -17px;
+   left: -30px;
+   font-size: 1.5em;
    transition: color 1.2s ease-out;
 }
 .icon-full:hover {
