@@ -1,16 +1,37 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&family=Shrikhand&display=swap");
 @keyframes check-appear {
-  to {
-    width: 60px;
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
   }
 }
-.check {
-  background-color: #99E2D0;
-  width: 0;
-  animation: check-appear 1s;
+@keyframes check-disappear {
+  100% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+  }
+  0% {
+    opacity: 1;
+  }
 }
-
-@keyframes check-disappear {}
+@keyframes check {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 @keyframes loader {
   from {
     transform: rotate(0deg);
@@ -27,7 +48,18 @@
     visibility: visible;
   }
 }
-@keyframes heart-fill {}
+@keyframes menu-appear {
+  0% {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 @keyframes content-appear {
   0% {
     opacity: 0;
@@ -135,6 +167,37 @@ a:visited {
   opacity: 0.85;
 }
 
+.heart-container {
+  position: relative;
+  cursor: pointer;
+}
+
+.icon-empty {
+  color: #101010;
+  position: absolute;
+  top: -17px;
+  left: -30px;
+  font-size: 1.5em;
+}
+
+.icon-empty:hover {
+  display: none;
+}
+
+.icon-full {
+  color: transparent;
+  position: absolute;
+  top: -17px;
+  left: -30px;
+  font-size: 1.5em;
+  transition: color 1.2s ease-out;
+}
+
+.icon-full:hover {
+  color: #9356DC;
+  transition: color 1s ease-out;
+}
+
 .card {
   position: relative;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
@@ -165,21 +228,50 @@ a:visited {
 }
 
 .menu_card {
+  position: relative;
   background-color: #FFFFFF;
   border-radius: 15px;
   margin: 12px 0px 10px 0px;
   box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
   padding: 12px 10px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  gap: 0px;
 }
 .menu_card .price {
-  margin-top: 20px;
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
   font-weight: 500;
   color: #353535;
+  transition: right 1s;
+}
+.menu_card .check {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  background-color: #99E2D0;
+  border-radius: 0px 15px 15px 0px;
+  height: 66px;
+  width: 0px;
+  animation: check-disappear 1s ease-out;
+  transition: width 1s;
+}
+.menu_card .check-icon {
+  display: inline-block;
+  position: absolute;
+  font-size: 1.4em;
+  color: #FFFFFF;
+  left: 23px;
+  top: 23px;
+  opacity: 0;
+}
+.menu_card:hover .price {
+  right: 68px;
+}
+.menu_card:hover .check_hover-appear {
+  animation: check-appear 1s ease-in;
+  width: 66px;
+}
+.menu_card:hover .check-icon {
+  opacity: 1;
 }
 
 .header {
@@ -383,6 +475,9 @@ a:visited {
 .results .result_container > a {
   margin-left: 20px;
 }
+.results .home-heart {
+  margin-right: 25px;
+}
 
 .badge {
   position: absolute;
@@ -413,6 +508,16 @@ a:visited {
   border-radius: 30px 30px 0px 0px;
   padding-left: 10px;
   padding-right: 10px;
+  margin-bottom: -30px;
+}
+.menu .menu-appetizer {
+  animation: menu-appear 2s ease-in;
+}
+.menu .menu-dishes {
+  animation: menu-appear 2.5s ease-in;
+}
+.menu .menu-desserts {
+  animation: menu-appear 3s ease-in;
 }
 
 .menu-wrapper {
@@ -492,6 +597,12 @@ a:visited {
     justify-content: center;
     align-items: center;
     gap: 24px;
+  }
+  .icon-empty {
+    left: 0;
+  }
+  .icon-full {
+    left: 0;
   }
   .menu > img {
     height: 423px;
