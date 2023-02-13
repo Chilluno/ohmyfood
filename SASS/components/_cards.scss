@@ -50,16 +50,19 @@ padding: 12px 10px;
          animation: check-disappear 1s ease-out;
          transition: width 1s;
          &-icon{
+            display: inline-block;
             position: absolute; 
-            width: 0px;
-            height: 0px;
-            background-image: url(../assets/icons/check.svg);
+            font-size: 1.4em;
+            color: $white;
+            left: 23px;
+            top: 23px;
+            opacity: 0;
          }
    }
 
    &:hover{
 
-      .price_hover{    
+      .price{    
          right: 68px;
 
       }
@@ -68,6 +71,10 @@ padding: 12px 10px;
          animation: check-appear 1s ease-in;
          width: 66px;
 
+      }
+
+      .check-icon{
+         opacity: 1;
       }
    }
    
