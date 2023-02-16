@@ -5,7 +5,7 @@
 
 .loader-container {
    position: absolute;
-   left: 50vw;
+   left: 40%;
    top: 50%;
    visibility: hidden;
    animation: loader-disappear 2s;
@@ -125,7 +125,8 @@ counter-reset: list;
    margin-top: 54px;
    margin-bottom: 64px;
    > h1 {
-      margin-left: 20px; 
+      margin-left: 20px;
+      margin-bottom: 20px; 
    }
    .result_container {
       @include flexbox(column, space-evenly, flex-start, 18px);
