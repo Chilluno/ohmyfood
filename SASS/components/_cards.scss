@@ -45,36 +45,51 @@ padding: 12px 10px;
          right: 0px;
          background-color: $tertiary-color;
          border-radius: 0px 15px 15px 0px;
-         height: 66px;
+         height: 0px;
          width: 0px;
          animation: check-disappear 1s ease-out;
          transition: width 1s;
          &-icon{
-            display: inline-block;
+            background-image: url(../assets/icons/check.svg);
+            border-style: none;
             position: absolute; 
             font-size: 1.4em;
             color: $white;
-            left: 23px;
-            top: 23px;
+            width: 0px;
+            height: 0px;
+            left: 22px;
+            top: 24px;
             opacity: 0;
+
+            &::before{
+               width:0px;
+               height:0px;
+            }
          }
    }
+
+   i.fa-solid.fa-circle-check.check-icon::before{
+         height:0px;
+         width:0px;
+      }
+
 
    &:hover{
 
       .price{    
          right: 68px;
-
       }
          
       .check_hover-appear{
          animation: check-appear 1s ease-in;
          width: 66px;
-
+         height: 66px;
       }
 
       .check-icon{
          opacity: 1;
+         width:20px;
+         height:21px;
       }
    }
    

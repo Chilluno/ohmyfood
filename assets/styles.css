@@ -132,8 +132,10 @@ html {
 }
 
 body {
-  width: 375px;
+  width: 100%;
+  height: 100%;
   background-color: #F6F6F6;
+  overflow-x: hidden;
 }
 
 a {
@@ -169,7 +171,7 @@ a:visited {
   color: #101010;
   position: absolute;
   top: -17px;
-  left: -10px;
+  left: -20px;
   font-size: 1.5em;
 }
 
@@ -181,7 +183,7 @@ a:visited {
   color: transparent;
   position: absolute;
   top: -17px;
-  left: -10px;
+  left: -20px;
   font-size: 1.5em;
   transition: color 1.2s ease-out;
 }
@@ -242,19 +244,30 @@ a:visited {
   right: 0px;
   background-color: #99E2D0;
   border-radius: 0px 15px 15px 0px;
-  height: 66px;
+  height: 0px;
   width: 0px;
   animation: check-disappear 1s ease-out;
   transition: width 1s;
 }
 .menu_card .check-icon {
-  display: inline-block;
+  background-image: url(../assets/icons/check.svg);
+  border-style: none;
   position: absolute;
   font-size: 1.4em;
   color: #FFFFFF;
-  left: 23px;
-  top: 23px;
+  width: 0px;
+  height: 0px;
+  left: 22px;
+  top: 24px;
   opacity: 0;
+}
+.menu_card .check-icon::before {
+  width: 0px;
+  height: 0px;
+}
+.menu_card i.fa-solid.fa-circle-check.check-icon::before {
+  height: 0px;
+  width: 0px;
 }
 .menu_card:hover .price {
   right: 68px;
@@ -262,9 +275,12 @@ a:visited {
 .menu_card:hover .check_hover-appear {
   animation: check-appear 1s ease-in;
   width: 66px;
+  height: 66px;
 }
 .menu_card:hover .check-icon {
   opacity: 1;
+  width: 20px;
+  height: 21px;
 }
 
 .header {
@@ -407,8 +423,6 @@ a:visited {
 }
 .how-to .instructions > li .instruction_icon {
   display: inline-block;
-  width: 13px;
-  height: 20px;
   margin-right: 20px;
   background-size: contain;
   background-repeat: no-repeat;
@@ -491,7 +505,7 @@ a:visited {
   background-color: #FFFFFF;
 }
 .menu > img {
-  width: 375px;
+  width: 100vw;
   height: 289px;
   z-index: -1;
   object-fit: cover;
@@ -536,7 +550,7 @@ a:visited {
   margin: 20px 0px 20px 0px;
 }
 
-@media screen and (min-width: 376px) {
+@media screen and (min-width: 600px) {
   body {
     background-color: #F6F6F6;
     width: auto;
